@@ -1,17 +1,29 @@
 public class Calculator {
     public int add(int a, int b){
-        //TODO inser your realisation in method add
+        return a+b;
     }
+
     public int dif(int a, int b){
-        //TODO inser your realisation in method dif
+        return a - b;
     }
-    public int div(int a, int b){
-        //TODO inser your realisation in method div
+
+    public int div(int a, int b) throws Exception {
+        if (a == 0 || b == 0) {
+            throw new Exception("Operation cannot be performed");
+        }
+        return a / b;
     }
+
     public int times(int a, int b){
-        //TODO inser your realisation in method times
+        return (a * b);
     }
-    public int solver(){
-        //TODO inser your realisation in method solver
+
+    public double solver(int a, int b) throws Exception {
+        // Solution of linear equation: ax + b = 0
+        if (a == 0 || b == 0) {
+            throw new Exception("Operation cannot be performed");
+        } else {
+            return div(dif(0, b), a);
+        }
     }
 }
