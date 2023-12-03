@@ -9,7 +9,7 @@ public class Calculator {
 
     public int div(int a, int b) throws Exception {
         if (a == 0 || b == 0) {
-            throw new Exception("Operation cannot be perfomed");
+            throw new Exception("Operation cannot be performed");
         }
         return a / b;
     }
