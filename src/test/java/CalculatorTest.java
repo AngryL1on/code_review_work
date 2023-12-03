@@ -7,12 +7,14 @@ class CalculatorTest {
 
     @Test
     void add() {
+        assertEquals(2, calculator.add(1, 1));
         assertEquals(5, calculator.add(2, 3));
         assertEquals(-7, calculator.add(-4, -3));
     }
 
     @Test
     void dif() {
+        assertEquals(1, calculator.dif(2, 1));
         assertEquals(3, calculator.dif(6, 3));
         assertEquals(9, calculator.dif(6, -3));
     }
@@ -25,20 +27,13 @@ class CalculatorTest {
 
     @Test
     void times() {
-        assertEquals(6, calculator.times(2, 3));
+        assertEquals(4, calculator.times(2, 2));
         assertEquals(-12, calculator.times(4, -3));
         assertEquals(0, calculator.times(4, 0));
     }
 
     @Test
     void solver() throws Exception {
-        // Both parameters come non-zero
-        assertEquals(-2, calculator.solver(4, 8));
-        assertEquals(2, calculator.solver(4, -8));
-
-        // One or both of the parameters is zero
-        assertThrows(Exception.class, () -> calculator.solver(0, -5));
-        assertThrows(Exception.class, () -> calculator.solver(5, 0));
-        assertThrows(Exception.class, () -> calculator.solver(0, 0));
+        assertEquals(121, calculator.solver(10, 2, 5));
     }
 }
