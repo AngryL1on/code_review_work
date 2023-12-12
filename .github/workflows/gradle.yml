@@ -9,9 +9,9 @@ name: Java CI with Gradle
 
 on:
   schedule:
+    - cron: '30 18 * * 2' # 21:30 по московскому времени во вторник
     - cron: '30 12 * * 3'
     - cron: '0 22 * * 5'
-    - cron: '20 18 * * 2' # 21:20 по московскому времени во вторник
   push:
     branches: [ "main" ]
   pull_request:
